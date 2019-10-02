@@ -2,8 +2,8 @@
 //  SecondViewController.swift
 //  DogeSwaggle
 //
-//  Created by Aaron Jubbal on 10/2/19.
-//  Copyright © 2019 Tech Crunch 2019 Table 34. All rights reserved.
+//  Created by Richard Yeh on 10/2/19.
+//  Copyright © 2019 Richard Yeh. All rights reserved.
 //
 
 import UIKit
