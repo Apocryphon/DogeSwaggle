@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
  class PicFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
@@ -45,6 +46,7 @@ import UIKit
                 let randoDogImageUrls = try JSONDecoder().decode(RandoDogImageResponse.self, from: data)
                 DispatchQueue.main.async {
                     self.imageUrls = randoDogImageUrls.dogImageUrls
+                    self.collectionView.reloadData()
                 }
             } catch {
                 
@@ -68,7 +70,12 @@ import UIKit
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PupPicCollectionViewCell
-        cell.backgroundColor = .black 
+        cell.backgroundColor = .black
+        guard let dogImageUrlString = imageUrls[indexPath.row], let dogImageUrl = URL(string: dogImageUrlString)
+            else { return cell }
+        cell.pupImageView.sd_setImage(with: dogImageUrl,
+                                      placeholderImage: nil)
+
         return cell
     }
 

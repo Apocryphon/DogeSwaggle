@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2875A94C874D97CCC6B81D20 /* Pods_DogeSwaggle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */; };
 		8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2B23456FC600BC4122 /* AppDelegate.swift */; };
 		8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2D23456FC600BC4122 /* FirstViewController.swift */; };
 		8176FB3323456FC600BC4122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3123456FC600BC4122 /* Main.storyboard */; };
@@ -30,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogeSwaggle.debug.xcconfig"; path = "Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle.debug.xcconfig"; sourceTree = "<group>"; };
+		42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogeSwaggle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogeSwaggle.release.xcconfig"; path = "Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle.release.xcconfig"; sourceTree = "<group>"; };
 		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogeSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8176FB2B23456FC600BC4122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8176FB2D23456FC600BC4122 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -59,17 +63,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2875A94C874D97CCC6B81D20 /* Pods_DogeSwaggle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1566FCC76CD84EFDD3E526 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8176FB1F23456FC600BC4122 = {
 			isa = PBXGroup;
 			children = (
 				8176FB2A23456FC600BC4122 /* DogeSwaggle */,
 				8176FB2923456FC600BC4122 /* Products */,
+				87AFCAEAD7284CC71BB8E038 /* Pods */,
+				2C1566FCC76CD84EFDD3E526 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +136,16 @@
 			path = "Pup Pic Stream";
 			sourceTree = "<group>";
 		};
+		87AFCAEAD7284CC71BB8E038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */,
+				5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		93C597BB2345A1CA0018435A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8176FB3C23456FC800BC4122 /* Build configuration list for PBXNativeTarget "DogeSwaggle" */;
 			buildPhases = (
+				384962EB8CB173EFD4D2D747 /* [CP] Check Pods Manifest.lock */,
 				8176FB2423456FC600BC4122 /* Sources */,
 				8176FB2523456FC600BC4122 /* Frameworks */,
 				8176FB2623456FC600BC4122 /* Resources */,
+				29F459DAED7CE2F97ED960DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +255,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29F459DAED7CE2F97ED960DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		384962EB8CB173EFD4D2D747 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DogeSwaggle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8176FB2423456FC600BC4122 /* Sources */ = {
@@ -388,6 +457,7 @@
 		};
 		8176FB3D23456FC800BC4122 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -405,6 +475,7 @@
 		};
 		8176FB3E23456FC800BC4122 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
