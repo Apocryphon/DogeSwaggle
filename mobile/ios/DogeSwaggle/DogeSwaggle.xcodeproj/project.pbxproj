@@ -21,6 +21,8 @@
 		93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */; };
 		93C597CB234653ED0018435A /* DogeSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C7234653ED0018435A /* DogeSelectionTableViewCell.swift */; };
 		93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C8234653ED0018435A /* DogeSelectionTableViewCell.xib */; };
+		93C597D02346786F0018435A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597CE2346786F0018435A /* IntroViewController.swift */; };
+		93C597D12346786F0018435A /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597CF2346786F0018435A /* IntroViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogeSelectionTableViewController.xib; sourceTree = "<group>"; };
 		93C597C7234653ED0018435A /* DogeSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		93C597C8234653ED0018435A /* DogeSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogeSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		93C597CE2346786F0018435A /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		93C597CF2346786F0018435A /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		8176FB2A23456FC600BC4122 /* DogeSwaggle */ = {
 			isa = PBXGroup;
 			children = (
+				93C597CD234677A60018435A /* Intro Flow */,
 				93C597BB2345A1CA0018435A /* Resources */,
 				93C597C4234653ED0018435A /* Doge Selection Modal */,
 				8176FB2B23456FC600BC4122 /* AppDelegate.swift */,
@@ -113,6 +118,15 @@
 				93C597C8234653ED0018435A /* DogeSelectionTableViewCell.xib */,
 			);
 			path = "Doge Selection Modal";
+			sourceTree = "<group>";
+		};
+		93C597CD234677A60018435A /* Intro Flow */ = {
+			isa = PBXGroup;
+			children = (
+				93C597CE2346786F0018435A /* IntroViewController.swift */,
+				93C597CF2346786F0018435A /* IntroViewController.xib */,
+			);
+			path = "Intro Flow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +190,7 @@
 				8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */,
 				8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */,
 				93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */,
+				93C597D12346786F0018435A /* IntroViewController.xib in Resources */,
 				93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */,
 				93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */,
 				8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */,
@@ -197,6 +212,7 @@
 				8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */,
 				8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */,
 				93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */,
+				93C597D02346786F0018435A /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

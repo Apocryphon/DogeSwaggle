@@ -97,7 +97,7 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    // MARK: - Text field delegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchController.isActive = false
