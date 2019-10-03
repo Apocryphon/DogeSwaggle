@@ -24,7 +24,6 @@ class FirstViewController: UIViewController {
             let viewController = DogeSelectionTableViewController(nibName: "DogeSelectionTableViewController", bundle: nil)
             let navigationController = UINavigationController(rootViewController: viewController)
             if #available(iOS 13.0, *) {
-                navigationController.modalPresentationStyle = .fullScreen
                 navigationController.isModalInPresentation = true
             }
             self.present(navigationController, animated: true, completion: nil)

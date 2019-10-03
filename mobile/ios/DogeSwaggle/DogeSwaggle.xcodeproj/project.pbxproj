@@ -15,14 +15,12 @@
 		8176FB412345782A00BC4122 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB402345782A00BC4122 /* Owner.swift */; };
 		8176FB432345786900BC4122 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB422345786900BC4122 /* Pet.swift */; };
 		8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB442345926700BC4122 /* PicFeedViewController.xib */; };
-		93C597B2234573C20018435A /* DogeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B0234573C20018435A /* DogeSelectionViewController.swift */; };
-		93C597B3234573C20018435A /* DogeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597B1234573C20018435A /* DogeSelectionViewController.xib */; };
-		93C597B62345803B0018435A /* DogeSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B42345803B0018435A /* DogeSelectionTableViewController.swift */; };
-		93C597B72345803B0018435A /* DogeSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597B52345803B0018435A /* DogeSelectionTableViewController.xib */; };
 		93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B92345835A0018435A /* PicFeedViewController.swift */; };
 		93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C597BE2345A2DB0018435A /* dog_breeds.json */; };
-		93C597C22345CB600018435A /* DogeSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C02345CB600018435A /* DogeSelectionTableViewCell.swift */; };
-		93C597C32345CB600018435A /* DogeSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C12345CB600018435A /* DogeSelectionTableViewCell.xib */; };
+		93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */; };
+		93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */; };
+		93C597CB234653ED0018435A /* DogeSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C7234653ED0018435A /* DogeSelectionTableViewCell.swift */; };
+		93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C8234653ED0018435A /* DogeSelectionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,14 +34,12 @@
 		8176FB402345782A00BC4122 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8176FB422345786900BC4122 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		8176FB442345926700BC4122 /* PicFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicFeedViewController.xib; sourceTree = "<group>"; };
-		93C597B0234573C20018435A /* DogeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeSelectionViewController.swift; sourceTree = "<group>"; };
-		93C597B1234573C20018435A /* DogeSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogeSelectionViewController.xib; sourceTree = "<group>"; };
-		93C597B42345803B0018435A /* DogeSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewController.swift; sourceTree = "<group>"; };
-		93C597B52345803B0018435A /* DogeSelectionTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogeSelectionTableViewController.xib; sourceTree = "<group>"; };
 		93C597B92345835A0018435A /* PicFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicFeedViewController.swift; sourceTree = "<group>"; };
 		93C597BE2345A2DB0018435A /* dog_breeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_breeds.json; sourceTree = "<group>"; };
-		93C597C02345CB600018435A /* DogeSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewCell.swift; sourceTree = "<group>"; };
-		93C597C12345CB600018435A /* DogeSelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogeSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewController.swift; sourceTree = "<group>"; };
+		93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogeSelectionTableViewController.xib; sourceTree = "<group>"; };
+		93C597C7234653ED0018435A /* DogeSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		93C597C8234653ED0018435A /* DogeSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogeSelectionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				93C597BB2345A1CA0018435A /* Resources */,
+				93C597C4234653ED0018435A /* Doge Selection Modal */,
 				8176FB2B23456FC600BC4122 /* AppDelegate.swift */,
 				8176FB2D23456FC600BC4122 /* FirstViewController.swift */,
 				93C597B92345835A0018435A /* PicFeedViewController.swift */,
@@ -86,12 +83,6 @@
 				8176FB3423456FC800BC4122 /* Assets.xcassets */,
 				8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */,
 				8176FB3923456FC800BC4122 /* Info.plist */,
-				93C597B0234573C20018435A /* DogeSelectionViewController.swift */,
-				93C597B1234573C20018435A /* DogeSelectionViewController.xib */,
-				93C597B42345803B0018435A /* DogeSelectionTableViewController.swift */,
-				93C597B52345803B0018435A /* DogeSelectionTableViewController.xib */,
-				93C597C02345CB600018435A /* DogeSelectionTableViewCell.swift */,
-				93C597C12345CB600018435A /* DogeSelectionTableViewCell.xib */,
 			);
 			path = DogeSwaggle;
 			sourceTree = "<group>";
@@ -111,6 +102,17 @@
 				93C597BE2345A2DB0018435A /* dog_breeds.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		93C597C4234653ED0018435A /* Doge Selection Modal */ = {
+			isa = PBXGroup;
+			children = (
+				93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */,
+				93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */,
+				93C597C7234653ED0018435A /* DogeSelectionTableViewCell.swift */,
+				93C597C8234653ED0018435A /* DogeSelectionTableViewCell.xib */,
+			);
+			path = "Doge Selection Modal";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,14 +173,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C597B3234573C20018435A /* DogeSelectionViewController.xib in Resources */,
-				93C597B72345803B0018435A /* DogeSelectionTableViewController.xib in Resources */,
 				8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */,
 				8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */,
 				93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */,
+				93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */,
+				93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */,
 				8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */,
 				8176FB3323456FC600BC4122 /* Main.storyboard in Resources */,
-				93C597C32345CB600018435A /* DogeSelectionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C597B2234573C20018435A /* DogeSelectionViewController.swift in Sources */,
 				93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */,
 				8176FB432345786900BC4122 /* Pet.swift in Sources */,
+				93C597CB234653ED0018435A /* DogeSelectionTableViewCell.swift in Sources */,
 				8176FB412345782A00BC4122 /* Owner.swift in Sources */,
-				93C597B62345803B0018435A /* DogeSelectionTableViewController.swift in Sources */,
 				8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */,
-				93C597C22345CB600018435A /* DogeSelectionTableViewCell.swift in Sources */,
 				8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */,
+				93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

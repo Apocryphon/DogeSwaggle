@@ -13,4 +13,8 @@ public struct Owner: Codable {
     public var ownerId: String
     
     public var name: String?
+    
+    var dogBreed: String? {
+         return UserDefaults.standard.string(forKey: "dogBreed")
+    }
 }

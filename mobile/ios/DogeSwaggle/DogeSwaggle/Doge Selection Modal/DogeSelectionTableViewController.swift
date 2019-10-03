@@ -8,12 +8,14 @@
 
 import UIKit
 
-class DogeSelectionTableViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating {
+class DogeSelectionTableViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating, UITextFieldDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
     
     var dogBreeds = [String]()
     var filteredDogBreeds = [String]()
+    
+    var selectedIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,8 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
         searchController.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Pick your dog's type..."
+        searchController.searchBar.returnKeyType = .done
+        searchController.searchBar.searchTextField.delegate = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         
@@ -40,6 +44,23 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
         self.tableView.register(UINib(nibName: "DogeSelectionTableViewCell", bundle: nil), forCellReuseIdentifier: "kDogeSelectionTableViewCell")
     }
 
+    // MARK: - Helper Methods
+    
+    func filterContentForSearchText(_ searchText: String) {
+      filteredDogBreeds = dogBreeds.filter({( dogBreed : String ) -> Bool in
+        dogBreed.lowercased().contains(searchText.lowercased())
+      })
+      tableView.reloadData()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+      return searchController.isActive && !searchBarIsEmpty()
+    }
+    
     func readJson() -> Array<String>? {
         // Get url for file
         guard let fileUrl = Bundle.main.url(forResource: "dog_breeds", withExtension: "json") else {
@@ -69,7 +90,18 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
     }
     
     @objc func doneButtonTapped(sender: UIBarButtonItem) -> Void {
+        if let selectedIndexPath = selectedIndexPath {
+            let selectedDogBreed = dogBreeds[selectedIndexPath.row]
+            UserDefaults.standard.set(selectedDogBreed, forKey: "dogType")
+        }
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchController.isActive = false
+        return true
     }
     
     // MARK: - Table view data source
@@ -83,21 +115,6 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
             return filteredDogBreeds.count
         }
         return dogBreeds.count
-    }
-
-    func filterContentForSearchText(_ searchText: String) {
-      filteredDogBreeds = dogBreeds.filter({( dogBreed : String ) -> Bool in
-        dogBreed.lowercased().contains(searchText.lowercased())
-      })
-      tableView.reloadData()
-    }
-    
-    func searchBarIsEmpty() -> Bool {
-      return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func isFiltering() -> Bool {
-      return searchController.isActive && !searchBarIsEmpty()
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -113,8 +130,27 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
         } else {
             cell.textLabel?.text = dogBreeds[indexPath.row]
         }
+        
+        if let selectedIndexPath = selectedIndexPath, selectedIndexPath == indexPath {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
 
         return cell
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView .deselectRow(at: indexPath, animated: true)
+        let cell = tableView.cellForRow(at: indexPath)
+        if let selectedIndexPath = selectedIndexPath {
+            let selectedCell = tableView.cellForRow(at: selectedIndexPath)
+            selectedCell?.accessoryType = .none
+        }
+        cell?.accessoryType = .checkmark
+        selectedIndexPath = indexPath
     }
 
     /*
