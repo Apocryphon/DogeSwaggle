@@ -24,9 +24,12 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
         
-        self.title = "What kind of dog do you have?"
+        self.title = "Your dog's breed?"
         
         searchController.searchResultsUpdater = self
         searchController.delegate = self
@@ -118,7 +121,6 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        print("\(String(describing: searchController.searchBar.text))")
         filterContentForSearchText(searchController.searchBar.text!)
     }
     
