@@ -13,6 +13,8 @@
 		8176FB3323456FC600BC4122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3123456FC600BC4122 /* Main.storyboard */; };
 		8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3423456FC800BC4122 /* Assets.xcassets */; };
 		8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */; };
+		93C597B2234573C20018435A /* DogeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B0234573C20018435A /* DogeSelectionViewController.swift */; };
+		93C597B3234573C20018435A /* DogeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597B1234573C20018435A /* DogeSelectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8176FB3423456FC800BC4122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8176FB3723456FC800BC4122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8176FB3923456FC800BC4122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93C597B0234573C20018435A /* DogeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeSelectionViewController.swift; sourceTree = "<group>"; };
+		93C597B1234573C20018435A /* DogeSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogeSelectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				8176FB3423456FC800BC4122 /* Assets.xcassets */,
 				8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */,
 				8176FB3923456FC800BC4122 /* Info.plist */,
+				93C597B0234573C20018435A /* DogeSelectionViewController.swift */,
+				93C597B1234573C20018435A /* DogeSelectionViewController.xib */,
 			);
 			path = DogeSwaggle;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C597B3234573C20018435A /* DogeSelectionViewController.xib in Resources */,
 				8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */,
 				8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */,
 				8176FB3323456FC600BC4122 /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C597B2234573C20018435A /* DogeSelectionViewController.swift in Sources */,
 				8176FB3023456FC600BC4122 /* SecondViewController.swift in Sources */,
 				8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */,
 				8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */,
