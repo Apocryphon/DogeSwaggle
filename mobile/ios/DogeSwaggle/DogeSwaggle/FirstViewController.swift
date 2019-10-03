@@ -21,11 +21,12 @@ class FirstViewController: UIViewController {
         super.viewDidAppear(animated)
         
         guard let dogType = UserDefaults.standard.string(forKey: "dogType") else {
-            let viewController = DogeSelectionViewController(nibName: "DogeSelectionViewController", bundle: nil)
+            let viewController = DogeSelectionTableViewController(nibName: "DogeSelectionTableViewController", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: viewController)
             if #available(iOS 13.0, *) {
-                viewController.isModalInPresentation = true
+                navigationController.isModalInPresentation = true
             }
-            self.present(viewController, animated: true, completion: nil)
+            self.present(navigationController, animated: true, completion: nil)
             return;
         }
     }
