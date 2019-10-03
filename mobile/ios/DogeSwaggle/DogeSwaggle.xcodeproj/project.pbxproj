@@ -17,6 +17,7 @@
 		8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB442345926700BC4122 /* PicFeedViewController.xib */; };
 		817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */; };
 		817FBF7A234681210080DF2B /* PupPicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */; };
+		817FBF7E23468DE00080DF2B /* RandoDogImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */; };
 		93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B92345835A0018435A /* PicFeedViewController.swift */; };
 		93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C597BE2345A2DB0018435A /* dog_breeds.json */; };
 		93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */; };
@@ -41,6 +42,7 @@
 		8176FB442345926700BC4122 /* PicFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicFeedViewController.xib; sourceTree = "<group>"; };
 		817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupPicCollectionViewCell.swift; sourceTree = "<group>"; };
 		817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PupPicCollectionViewCell.xib; sourceTree = "<group>"; };
+		817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandoDogImageResponse.swift; sourceTree = "<group>"; };
 		93C597B92345835A0018435A /* PicFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicFeedViewController.swift; sourceTree = "<group>"; };
 		93C597BE2345A2DB0018435A /* dog_breeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_breeds.json; sourceTree = "<group>"; };
 		93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				8176FB402345782A00BC4122 /* Owner.swift */,
 				8176FB422345786900BC4122 /* Pet.swift */,
+				817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817FBF7E23468DE00080DF2B /* RandoDogImageResponse.swift in Sources */,
 				93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */,
 				817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */,
 				8176FB432345786900BC4122 /* Pet.swift in Sources */,

@@ -19,17 +19,39 @@ import UIKit
                                              left: 20.0,
                                              bottom: 50.0,
                                              right: 20.0)
+    
+    private var imageUrls = [String?]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.dataSource = self;
         collectionView.delegate = self;
-        
+
         collectionView.register(UINib(nibName: "PupPicCollectionViewCell", bundle: nil),
                                 forCellWithReuseIdentifier: reuseIdentifier)
-
+        
+        fetchDogImages()
      }
+    
+    // MARK: - Dog CEO API
+    func fetchDogImages() {
+        let randoDogImageUrl = URL(string:"https://dog.ceo/api/breeds/image/random/50")!
+        let task = URLSession.shared.dataTask(with: randoDogImageUrl) { (data, response, error) in
+            guard error == nil else { return }
+            guard let data = data else { return }
+
+            do {
+                let randoDogImageUrls = try JSONDecoder().decode(RandoDogImageResponse.self, from: data)
+                DispatchQueue.main.async {
+                    self.imageUrls = randoDogImageUrls.dogImageUrls
+                }
+            } catch {
+                
+            }
+        }
+        task.resume()
+    }
     
     
     // MARK: - UICollectionViewDataSource
@@ -39,19 +61,18 @@ import UIKit
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return imageUrls.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PupPicCollectionViewCell
-        cell.backgroundColor = .black
+        cell.backgroundColor = .black 
         return cell
     }
 
  }
-
 
 // MARK: - Collection View Flow Layout Delegate
 extension PicFeedViewController : UICollectionViewDelegateFlowLayout {
