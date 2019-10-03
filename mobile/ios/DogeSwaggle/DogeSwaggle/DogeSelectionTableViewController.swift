@@ -8,7 +8,12 @@
 
 import UIKit
 
-class DogeSelectionTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
+class DogeSelectionTableViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating {
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    var dogBreeds = [String]()
+    var filteredDogBreeds = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +25,49 @@ class DogeSelectionTableViewController: UITableViewController, UISearchBarDelega
          self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
         
         self.title = "What kind of dog do you have?"
-        let searchController = UISearchController(searchResultsController: nil)
+        
         searchController.searchResultsUpdater = self
+        searchController.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Pick your dog's type..."
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         
-        searchController.searchBar.placeholder = "Pick your dog's type..."
+        if let dogBreeds = readJson() {
+            self.dogBreeds = dogBreeds
+        }
         
+        self.tableView.register(UINib(nibName: "DogeSelectionTableViewCell", bundle: nil), forCellReuseIdentifier: "kDogeSelectionTableViewCell")
     }
 
+    func readJson() -> Array<String>? {
+        // Get url for file
+        guard let fileUrl = Bundle.main.url(forResource: "dog_breeds", withExtension: "json") else {
+            print("File could not be located at the given url")
+            return nil
+        }
+
+        do {
+            // Get data from file
+            let data = try Data(contentsOf: fileUrl)
+
+            // Decode data to a Dictionary<String, Any> object
+            guard let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+                print("Could not cast JSON content as a Dictionary<String, Any>")
+                return nil
+            }
+
+            if let dogBreeds = dictionary["dogs"] as? [String] {
+                return dogBreeds
+            }
+            return nil
+        } catch {
+            // Print error if something went wrong
+            print("Error: \(error)")
+        }
+        return nil
+    }
+    
     @objc func doneButtonTapped(sender: UIBarButtonItem) -> Void {
         self.dismiss(animated: true, completion: nil)
     }
@@ -36,28 +75,47 @@ class DogeSelectionTableViewController: UITableViewController, UISearchBarDelega
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if isFiltering() {
+            return filteredDogBreeds.count
+        }
+        return dogBreeds.count
     }
 
-    func updateSearchResults(for searchController: UISearchController) {
-        print("\(String(describing: searchController.searchBar.text))")
+    func filterContentForSearchText(_ searchText: String) {
+      filteredDogBreeds = dogBreeds.filter({( dogBreed : String ) -> Bool in
+        dogBreed.lowercased().contains(searchText.lowercased())
+      })
+      tableView.reloadData()
     }
     
-    /*
+    func searchBarIsEmpty() -> Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+      return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        print("\(String(describing: searchController.searchBar.text))")
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kDogeSelectionTableViewCell", for: indexPath)
 
-        // Configure the cell...
+        if isFiltering() {
+            cell.textLabel?.text = filteredDogBreeds[indexPath.row]
+        } else {
+            cell.textLabel?.text = dogBreeds[indexPath.row]
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
