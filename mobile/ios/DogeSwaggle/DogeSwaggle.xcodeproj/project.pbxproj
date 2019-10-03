@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2875A94C874D97CCC6B81D20 /* Pods_DogeSwaggle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */; };
+		70A4B00F23467E2F009502E8 /* DogeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4B00E23467E2F009502E8 /* DogeHomeViewController.swift */; };
 		8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2B23456FC600BC4122 /* AppDelegate.swift */; };
 		8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2D23456FC600BC4122 /* FirstViewController.swift */; };
 		8176FB3323456FC600BC4122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3123456FC600BC4122 /* Main.storyboard */; };
@@ -15,11 +16,11 @@
 		8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */; };
 		8176FB412345782A00BC4122 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB402345782A00BC4122 /* Owner.swift */; };
 		8176FB432345786900BC4122 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB422345786900BC4122 /* Pet.swift */; };
-		8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB442345926700BC4122 /* PicFeedViewController.xib */; };
 		817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */; };
 		817FBF7A234681210080DF2B /* PupPicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */; };
 		817FBF7E23468DE00080DF2B /* RandoDogImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */; };
-		93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B92345835A0018435A /* PicFeedViewController.swift */; };
+		817FBF802346A1720080DF2B /* PicFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF7F2346A1720080DF2B /* PicFeedViewController.swift */; };
+		817FBF822346A1850080DF2B /* PicFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817FBF812346A1850080DF2B /* PicFeedViewController.xib */; };
 		93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C597BE2345A2DB0018435A /* dog_breeds.json */; };
 		93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */; };
 		93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */; };
@@ -34,6 +35,7 @@
 		3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogeSwaggle.debug.xcconfig"; path = "Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle.debug.xcconfig"; sourceTree = "<group>"; };
 		42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogeSwaggle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogeSwaggle.release.xcconfig"; path = "Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle.release.xcconfig"; sourceTree = "<group>"; };
+		70A4B00E23467E2F009502E8 /* DogeHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeHomeViewController.swift; sourceTree = "<group>"; };
 		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogeSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8176FB2B23456FC600BC4122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8176FB2D23456FC600BC4122 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -43,11 +45,11 @@
 		8176FB3923456FC800BC4122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8176FB402345782A00BC4122 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8176FB422345786900BC4122 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
-		8176FB442345926700BC4122 /* PicFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicFeedViewController.xib; sourceTree = "<group>"; };
 		817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupPicCollectionViewCell.swift; sourceTree = "<group>"; };
 		817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PupPicCollectionViewCell.xib; sourceTree = "<group>"; };
 		817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandoDogImageResponse.swift; sourceTree = "<group>"; };
-		93C597B92345835A0018435A /* PicFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicFeedViewController.swift; sourceTree = "<group>"; };
+		817FBF7F2346A1720080DF2B /* PicFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicFeedViewController.swift; sourceTree = "<group>"; };
+		817FBF812346A1850080DF2B /* PicFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicFeedViewController.xib; sourceTree = "<group>"; };
 		93C597BE2345A2DB0018435A /* dog_breeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_breeds.json; sourceTree = "<group>"; };
 		93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewController.swift; sourceTree = "<group>"; };
 		93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogeSelectionTableViewController.xib; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				817FBF76234680500080DF2B /* Pup Pic Stream */,
 				8176FB2B23456FC600BC4122 /* AppDelegate.swift */,
 				8176FB2D23456FC600BC4122 /* FirstViewController.swift */,
+				70A4B00E23467E2F009502E8 /* DogeHomeViewController.swift */,
 				8176FB3F2345775100BC4122 /* Models */,
 				8176FB3123456FC600BC4122 /* Main.storyboard */,
 				8176FB3423456FC800BC4122 /* Assets.xcassets */,
@@ -128,8 +131,8 @@
 		817FBF76234680500080DF2B /* Pup Pic Stream */ = {
 			isa = PBXGroup;
 			children = (
-				93C597B92345835A0018435A /* PicFeedViewController.swift */,
-				8176FB442345926700BC4122 /* PicFeedViewController.xib */,
+				817FBF7F2346A1720080DF2B /* PicFeedViewController.swift */,
+				817FBF812346A1850080DF2B /* PicFeedViewController.xib */,
 				817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */,
 				817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */,
 			);
@@ -142,7 +145,6 @@
 				3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */,
 				5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,9 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */,
-				8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */,
 				93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */,
 				93C597D12346786F0018435A /* IntroViewController.xib in Resources */,
+				817FBF822346A1850080DF2B /* PicFeedViewController.xib in Resources */,
 				93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */,
 				93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */,
 				817FBF7A234681210080DF2B /* PupPicCollectionViewCell.xib in Resources */,
@@ -304,14 +306,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				817FBF7E23468DE00080DF2B /* RandoDogImageResponse.swift in Sources */,
-				93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */,
 				817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */,
 				8176FB432345786900BC4122 /* Pet.swift in Sources */,
 				93C597CB234653ED0018435A /* DogeSelectionTableViewCell.swift in Sources */,
 				8176FB412345782A00BC4122 /* Owner.swift in Sources */,
 				93C597D423468DF30018435A /* ColorPalette.swift in Sources */,
+				817FBF802346A1720080DF2B /* PicFeedViewController.swift in Sources */,
 				8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */,
 				8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */,
+				70A4B00F23467E2F009502E8 /* DogeHomeViewController.swift in Sources */,
 				93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */,
 				93C597D02346786F0018435A /* IntroViewController.swift in Sources */,
 			);
