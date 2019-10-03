@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  PicFeedViewController.swift
 //  DogeSwaggle
 //
 //  Created by Richard Yeh on 10/2/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class PicFeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
