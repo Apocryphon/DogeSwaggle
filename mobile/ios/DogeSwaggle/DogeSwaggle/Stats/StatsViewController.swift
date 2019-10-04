@@ -19,6 +19,13 @@ class StatsViewController: UIViewController {
     }
 
 
+    @IBAction func streakDisplayButtonTapped(_ sender: Any) {
+        let viewController = IntroViewController(nibName: "IntroViewController", bundle: nil)
+        if #available(iOS 13.0, *) {
+            viewController.modalPresentationStyle = .fullScreen
+        }
+        self.present(viewController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
