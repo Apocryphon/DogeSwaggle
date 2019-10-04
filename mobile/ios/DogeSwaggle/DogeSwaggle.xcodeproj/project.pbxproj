@@ -61,7 +61,7 @@
 		814075B32346D6640038DA5D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		814075B42346D6640038DA5D /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		814075B72346EDB40038DA5D /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
-		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogeSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DogeSwaggle.app; path = DogSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8176FB2B23456FC600BC4122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8176FB2D23456FC600BC4122 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		8176FB3423456FC800BC4122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		8176FB2923456FC600BC4122 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8176FB2823456FC600BC4122 /* DogSwaggle.app */,
+				8176FB2823456FC600BC4122 /* DogeSwaggle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 			);
 			name = DogeSwaggle;
 			productName = DogeSwaggle;
-			productReference = 8176FB2823456FC600BC4122 /* DogSwaggle.app */;
+			productReference = 8176FB2823456FC600BC4122 /* DogeSwaggle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

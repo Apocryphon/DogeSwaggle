@@ -36,7 +36,7 @@ enum DogCategory: Int, CaseIterable {
         case .Hotels:
             return ["Grand Hyatt SF", "Hotel Abri"]
         case .Parks:
-            return ["Outerlands", "Skool", "Surisan"]
+            return ["Park1", "Park2", "Park3", "Park4"]
         default:
             return []
         }
@@ -44,6 +44,7 @@ enum DogCategory: Int, CaseIterable {
 }
 
 extension DogeHomeViewController: UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         switch DogCategory(rawValue: indexPath.section)! {
@@ -52,17 +53,19 @@ extension DogeHomeViewController: UICollectionViewDelegateFlowLayout {
         case .Restaurants:
             return CGSize(width: collectionView.frame.width, height: indexPath.row == 0 ? 176 : 374)
         case .Destinations:
-            return CGSize(width: collectionView.frame.width, height: 190)
+            return CGSize(width: collectionView.frame.width, height: 400)
         case .Hotels:
             return CGSize(width: collectionView.frame.width, height: 176)
         case .Parks:
-            return CGSize(width: collectionView.frame.width, height: 246)
+            return CGSize(width: collectionView.frame.width, height: 400)
         }
     }
 }
 
 class DogeHomeViewController: UICollectionViewController {
     
+    private var parks = [Park]()
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         self.setupViews()
@@ -90,6 +93,7 @@ class DogeHomeViewController: UICollectionViewController {
         collectionView.register(QuestionHeader.self, forCellWithReuseIdentifier: "questionHeader")
         collectionView.register(ImageHeader.self, forCellWithReuseIdentifier: "imageHeader")
         collectionView.register(DogCollectionCell.self, forCellWithReuseIdentifier: "rowCell")
+        collectionView.register(DogCollectionBoxCell.self, forCellWithReuseIdentifier: "boxCell")
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
     }
     
@@ -107,6 +111,12 @@ class DogeHomeViewController: UICollectionViewController {
         }
         if indexPath.section == 1 && indexPath.row == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageHeader", for: indexPath) as! ImageHeader
+            return cell
+        }
+        if indexPath.section == DogCategory.Destinations.rawValue || indexPath.section == DogCategory.Parks.rawValue {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "boxCell", for: indexPath) as! DogCollectionBoxCell
+            cell.dogCategory = DogCategory(rawValue: indexPath.section)
+            cell.setupStack()
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rowCell", for: indexPath) as! DogCollectionCell
@@ -157,8 +167,10 @@ extension DogeHomeViewController {
             guard let data = data else { return }
 
             do {
-                let parks = try JSONDecoder().decode([Park].self, from: data)
-                print(parks)
+                let parkResponse = try JSONDecoder().decode([Park].self, from: data)
+                if parkResponse.count >= 4 {
+                    self.parks = Array(parkResponse.prefix(4))
+                }
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -197,6 +209,43 @@ class DogCollectionCell: UICollectionViewCell {
     }
 }
 
+class DogCollectionBoxCell: DogCollectionCell {
+    override init(frame: CGRect) {
+        super.init(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height * 2 + 50))
+        self.backgroundColor = .white
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func setupStack() {
+        let category = dogCategory ?? .Restaurants
+        
+        for (index, name) in category.imageNames.enumerated() {
+            let view = UIImageView(image: UIImage(named: name))
+            view.contentMode = .scaleAspectFit
+            
+            let fixedMargin = 15
+            let fixedWidth = 168
+            let fixedHeight = 190
+            let fixedSpace = 10
+            
+            switch index {
+            case 0:
+                view.frame = CGRect(x: fixedMargin, y: 0, width: fixedWidth, height: fixedHeight)
+            case 1:
+                view.frame = CGRect(x: fixedMargin + fixedWidth + fixedSpace, y: 0, width: fixedWidth, height: fixedHeight)
+            case 2:
+                view.frame = CGRect(x: fixedMargin, y: fixedHeight + fixedSpace, width: fixedWidth, height: fixedHeight)
+            default:
+                view.frame = CGRect(x: fixedMargin + fixedWidth + fixedSpace, y: fixedHeight + fixedSpace, width: fixedWidth, height: fixedHeight)
+            }
+            self.contentView.addSubview(view)
+        }
+    }
+}
+
 class DogScroll: UIScrollView {
     
     var category: DogCategory?
@@ -226,6 +275,8 @@ class DogScroll: UIScrollView {
         contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         addSubview(stackView)
         stackView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        self.contentSize = CGSize(width: frame.width + 100, height: frame.height)
+        self.showsHorizontalScrollIndicator = false
     }
 }
 
@@ -260,8 +311,8 @@ class ImageHeader: UICollectionViewCell {
         super.init(frame: frame)
         
         let imageView = UIImageView(image: UIImage(named: "pet-destinations"))
-        imageView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 374)
-        imageView.contentMode = .scaleAspectFit
+        imageView.frame = CGRect(x: 15.0, y: 15.0, width: frame.width - 30.0, height: frame.height)
+        imageView.contentMode = .scaleAspectFill
         contentView.addSubview(imageView)
         backgroundColor = .white
     }
