@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 enum DogCategory: Int, CaseIterable {
     case HeaderQuestion, Restaurants, Destinations, Hotels, Parks
@@ -241,6 +242,8 @@ class DogCollectionBoxCell: DogCollectionCell {
             let fixedHeight = 190
             let fixedSpace = 10
             
+            let mosconeCoordinates = CLLocation(latitude: 37.783863055111, longitude: 122.401261925697)
+            
             switch index {
             case 0:
                 view.frame = CGRect(x: fixedMargin, y: 0, width: fixedWidth, height: fixedHeight)
@@ -254,17 +257,34 @@ class DogCollectionBoxCell: DogCollectionCell {
             self.contentView.addSubview(view)
             
             if category.rawValue == DogCategory.Parks.rawValue {
-                let nameLabel = UILabel(frame: view.frame)
-                nameLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
-                nameLabel.textColor = UIColor.white
-                nameLabel.center = CGPoint(x: view.frame.minX + view.frame.size.width / 2, y: view.frame.minY + view.frame.size.height * 0.75)
-                nameLabel.numberOfLines = 0
-                nameLabel.textAlignment = NSTextAlignment.center
+                guard models.count > 0 else { return }
 
+                // todo: placeholders?
                 if let park = models[index] as? Park {
+                    let nameLabel = UILabel(frame: view.frame)
+                    nameLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+                    nameLabel.textColor = UIColor.white
+                    nameLabel.center = CGPoint(x: view.frame.minX + view.frame.size.width / 2, y: view.frame.minY + view.frame.size.height * 0.75)
+                    nameLabel.numberOfLines = 0
+                    nameLabel.textAlignment = NSTextAlignment.center
+
                     nameLabel.text = park.name
+                    self.contentView.addSubview(nameLabel)
+
+                    if let parkLat = Double(park.latitude), let parkLong = Double(park.longitude) {
+                        let parkCoordinates = CLLocation(latitude: parkLat, longitude: parkLong)
+                        let distance = mosconeCoordinates.distance(from: parkCoordinates) * 0.0000001
+                        let distanceLabel = UILabel(frame: view.frame)
+                        distanceLabel.font = UIFont.boldSystemFont(ofSize: 13.0)
+                        distanceLabel.textColor = UIColor.white
+                        distanceLabel.center = CGPoint(x: nameLabel.center.x, y: view.frame.minY + view.frame.size.height * 0.75 + 18.0)
+                        distanceLabel.numberOfLines = 0
+                        distanceLabel.textAlignment = NSTextAlignment.center
+                        let milesAway: String = String(format:"%.1f", distance)
+                        distanceLabel.text = "\(milesAway) mi."
+                        self.contentView.addSubview(distanceLabel)
+                    }
                 }
-                self.contentView.addSubview(nameLabel)
             }
 
         }
