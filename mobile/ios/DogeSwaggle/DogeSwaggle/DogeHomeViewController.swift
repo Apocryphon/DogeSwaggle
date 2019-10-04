@@ -126,6 +126,7 @@ class DogeHomeViewController: UICollectionViewController {
         if indexPath.section == DogCategory.Destinations.rawValue {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "boxCell", for: indexPath) as! DogCollectionBoxCell
             cell.dogCategory = DogCategory(rawValue: indexPath.section)
+            cell.models = self.airlineData
             cell.setupStack()
             return cell
         }
@@ -374,6 +375,32 @@ class DogCollectionBoxCell: DogCollectionCell {
                         distanceLabel.text = "\(milesAway) mi."
                         self.contentView.addSubview(distanceLabel)
                     }
+                }
+            }
+            else if category.rawValue == DogCategory.Destinations.rawValue {
+                guard models.count > 0 else { return }
+
+                // todo: placeholders?
+                if let destination = models[index] as? AirlineData {
+                    let nameLabel = UILabel(frame: view.frame)
+                    nameLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+                    nameLabel.textColor = UIColor.white
+                    nameLabel.center = CGPoint(x: view.frame.minX + view.frame.size.width / 2, y: view.frame.minY + view.frame.size.height * 0.75)
+                    nameLabel.numberOfLines = 0
+                    nameLabel.textAlignment = NSTextAlignment.center
+
+                    nameLabel.text = destination.airportName
+                    self.contentView.addSubview(nameLabel)
+                    
+                    let dateLabel = UILabel(frame: view.frame)
+                    dateLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+                    dateLabel.textColor = UIColor.white
+                    dateLabel.center = CGPoint(x: nameLabel.center.x, y: view.frame.minY + view.frame.size.height * 0.75 + 25.0)
+                    dateLabel.numberOfLines = 0
+                    dateLabel.textAlignment = NSTextAlignment.center
+
+                    dateLabel.text = destination.date
+                    self.contentView.addSubview(dateLabel)
                 }
             }
         }
