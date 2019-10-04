@@ -12,6 +12,8 @@
 		814075A92346C1AD0038DA5D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814075A82346C1AD0038DA5D /* MainViewController.swift */; };
 		814075B82346EDB40038DA5D /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814075B72346EDB40038DA5D /* Park.swift */; };
 		814075BB23476DAD0038DA5D /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814075BA23476DAD0038DA5D /* Clinic.swift */; };
+		814075BE2347B33C0038DA5D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814075BC2347B33C0038DA5D /* ProfileViewController.swift */; };
+		814075BF2347B33C0038DA5D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814075BD2347B33C0038DA5D /* ProfileViewController.xib */; };
 		8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2B23456FC600BC4122 /* AppDelegate.swift */; };
 		8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3423456FC800BC4122 /* Assets.xcassets */; };
 		8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */; };
@@ -61,7 +63,9 @@
 		814075A82346C1AD0038DA5D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		814075B72346EDB40038DA5D /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
 		814075BA23476DAD0038DA5D /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
-		8176FB2823456FC600BC4122 /* DogSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		814075BC2347B33C0038DA5D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		814075BD2347B33C0038DA5D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DogeSwaggle.app; path = DogSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8176FB2B23456FC600BC4122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8176FB3423456FC800BC4122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8176FB3723456FC800BC4122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				817FBF812346A1850080DF2B /* PicFeedViewController.xib */,
 				817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */,
 				817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */,
+				814075BC2347B33C0038DA5D /* ProfileViewController.swift */,
+				814075BD2347B33C0038DA5D /* ProfileViewController.xib */,
 			);
 			path = "Pup Pic Stream";
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				93C597D12346786F0018435A /* IntroViewController.xib in Resources */,
 				9317F7CA2346C00C009BD42B /* SF-Pro-Display-Ultralight.otf in Resources */,
 				9317F7D523471D71009BD42B /* StatsViewController.xib in Resources */,
+				814075BF2347B33C0038DA5D /* ProfileViewController.xib in Resources */,
 				817FBF822346A1850080DF2B /* PicFeedViewController.xib in Resources */,
 				93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */,
 				93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */,
@@ -412,6 +419,7 @@
 				9317F7D72347B392009BD42B /* AirlineData.swift in Sources */,
 				817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */,
 				8176FB432345786900BC4122 /* Pet.swift in Sources */,
+				814075BE2347B33C0038DA5D /* ProfileViewController.swift in Sources */,
 				9317F7D423471D71009BD42B /* StatsViewController.swift in Sources */,
 				93C597CB234653ED0018435A /* DogeSelectionTableViewCell.swift in Sources */,
 				8176FB412345782A00BC4122 /* Owner.swift in Sources */,
