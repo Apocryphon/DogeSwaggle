@@ -61,7 +61,7 @@
 		814075A82346C1AD0038DA5D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		814075B72346EDB40038DA5D /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
 		814075BA23476DAD0038DA5D /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
-		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DogeSwaggle.app; path = DogSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8176FB2823456FC600BC4122 /* DogSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8176FB2B23456FC600BC4122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8176FB3423456FC800BC4122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8176FB3723456FC800BC4122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		8176FB2923456FC600BC4122 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8176FB2823456FC600BC4122 /* DogeSwaggle.app */,
+				8176FB2823456FC600BC4122 /* DogSwaggle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 			);
 			name = DogeSwaggle;
 			productName = DogeSwaggle;
-			productReference = 8176FB2823456FC600BC4122 /* DogeSwaggle.app */;
+			productReference = 8176FB2823456FC600BC4122 /* DogSwaggle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -560,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TXV64D6H4A;
 				INFOPLIST_FILE = DogeSwaggle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -578,6 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TXV64D6H4A;
 				INFOPLIST_FILE = DogeSwaggle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,10 +10,12 @@ import UIKit
 
 class StatsViewController: UIViewController {
 
+    @IBOutlet var timeSegmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        timeSegmentedControl.selectedSegmentIndex = 3
     }
 
 
