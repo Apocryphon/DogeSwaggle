@@ -55,18 +55,21 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        let homeImage = #imageLiteral(resourceName: "home-deselected")
         let homeBarItem = UITabBarItem(title: "Home",
-                                         image: UIImage(named: "home.png"),
+                                         image: homeImage,
                                          selectedImage: nil)
         homeViewController.tabBarItem = homeBarItem
         
+        let calendarImage = #imageLiteral(resourceName: "calednar-deselected")
         let picFeedBarItem = UITabBarItem(title: "Book",
-                                          image: UIImage(named: "calendar.png"),
+                                          image: calendarImage,
                                           selectedImage: nil)
         picFeedViewController.tabBarItem = picFeedBarItem
         
+        let statsImage = #imageLiteral(resourceName: "stats-deselected")
         let statsFeedBarItem = UITabBarItem(title: "Stats",
-                                          image: UIImage(named: "calendar.png"),
+                                            image: statsImage,
                                           selectedImage: nil)
         statsViewController.tabBarItem = statsFeedBarItem
 
