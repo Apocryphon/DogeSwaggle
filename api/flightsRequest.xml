@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <t:Transaction xmlns:t="xxs">
+         <tc>
+             <iden u="Farelogix" p="TEMP02" pseudocity="AHXA" agt="xmlsfo023" agtpwd="Farelogix145" agtrole="Ticketing Agent" agy="45520300" />
+             <agent user="xmlsfo023" />
+             <trace>xmlsfo023</trace>
+             <script engine="FLXDM" name="uad-hackathon-dispatch.flxdm" />
+         </tc>
+      </t:Transaction>
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body>
+      <ns1:XXTransaction xmlns:ns1="xxs">
+         <REQ>
+            <AirShoppingRQ Version="17.2" TransactionIdentifier="12345785NHUW8741697QWe8541223111">
+               <PointOfSale>
+                  <Location>
+                     <CountryCode>US</CountryCode>
+                     <CityCode>ORD</CityCode>
+                  </Location>
+               </PointOfSale>
+               <Document>
+                  <ReferenceVersion>17.2</ReferenceVersion>
+               </Document>
+               <Party>
+                  <Sender>
+                     <TravelAgencySender>
+                        <Name>United Airlines NDC</Name>
+                        <PseudoCity>AHXA</PseudoCity>
+                        <AgencyID>45520300</AgencyID>
+                        <AgentUser>
+                           <Name>sprkuser01</Name>
+                           <AgentUserID>sprkuser01</AgentUserID>
+                           <UserRole>Ticketing Agent</UserRole>
+                        </AgentUser>
+                     </TravelAgencySender>
+                  </Sender>
+               </Party>
+               <CoreQuery>
+                  <OriginDestinations>
+                     <OriginDestination OriginDestinationKey="OD1">
+                        <Departure>
+                           <AirportCode>IAH</AirportCode>
+                           <Date>2019-10-20</Date>
+                        </Departure>
+                        <Arrival>
+                           <AirportCode>MEX</AirportCode>
+                        </Arrival>
+                     </OriginDestination>
+                     <OriginDestination OriginDestinationKey="OD2">
+                        <Departure>
+                           <AirportCode>MEX</AirportCode>
+                           <Date>2019-10-22</Date>
+                        </Departure>
+                        <Arrival>
+                           <AirportCode>IAH</AirportCode>
+                        </Arrival>
+                     </OriginDestination>
+                  </OriginDestinations>
+               </CoreQuery>
+               <Preference>
+                  <FarePreferences>
+                     <Types>
+                        <Type>749</Type>
+                        <Type>70J</Type>
+                     </Types>
+                  </FarePreferences>
+                  <FlightPreferences>
+                     <Characteristic>
+                        <NonStopPreferences>Y</NonStopPreferences>
+                     </Characteristic>
+                  </FlightPreferences>
+                  <CabinPreferences>
+                     <CabinType>
+                        <Code>Y</Code>
+                        <Name>Economy</Name>
+                     </CabinType>
+                  </CabinPreferences>
+               </Preference>
+               <DataLists>
+                  <PassengerList>
+                     <Passenger PassengerID="T1">
+                        <PTC>ADT</PTC>
+                     </Passenger>
+                  </PassengerList>
+               </DataLists>
+            </AirShoppingRQ>
+         </REQ>
+      </ns1:XXTransaction>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

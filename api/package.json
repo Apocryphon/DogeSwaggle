@@ -1,0 +1,21 @@
+{
+  "name": "dogswaggle-api",
+  "version": "1.0.0",
+  "main": "index.coffee",
+  "author": "Raman Shalupau <raman.shalupau@gmail.com>",
+  "license": "All rights reserved",
+  "private": true,
+  "scripts": {
+    "start": "coffee index.coffee"
+  },
+  "dependencies": {
+    "array-flatten": "^2.1.2",
+    "coffeescript": "2",
+    "dotenv": "^8.1.0",
+    "easy-soap-request": "^3.0.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "xml2js": "^0.4.22"
+  }
+}
