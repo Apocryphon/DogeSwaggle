@@ -12,6 +12,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     
     var homeViewController: DogeHomeViewController
     var picFeedViewController: PicFeedViewController
+    var hasShownIntro = false
     
     let selectedPinkColor = UIColor(red:0.93, green:0.18, blue:0.55, alpha:1.0)
 
@@ -21,6 +22,18 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         UITabBar.appearance().tintColor = selectedPinkColor
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    
+        if !hasShownIntro {
+            let viewController = IntroViewController(nibName: "IntroViewController", bundle: nil)
+            if #available(iOS 13.0, *) {
+                viewController.modalPresentationStyle = .fullScreen
+            }
+            self.present(viewController, animated: false, completion: nil)
+            hasShownIntro = true
+        }
+    }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         homeViewController = DogeHomeViewController(collectionViewLayout: UICollectionViewFlowLayout())

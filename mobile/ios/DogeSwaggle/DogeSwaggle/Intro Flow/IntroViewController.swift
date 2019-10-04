@@ -8,7 +8,8 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+class IntroViewController: UIViewController, DogeSelectionTableViewControllerDelegate {
+    
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var loginButton: UIButton!
     
@@ -35,10 +36,33 @@ class IntroViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         print("\(#function)")
+        
+        showDogSelection()
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         print("\(#function)")
+        
+        showDogSelection()
+    }
+    
+    func showDogSelection() -> Void {
+        if UserDefaults.standard.string(forKey: "dogType") != nil {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            let dogeSelectionController = DogeSelectionTableViewController(nibName: "DogeSelectionTableViewController", bundle: nil)
+            dogeSelectionController.delegate = self
+            let navigationController = UINavigationController(rootViewController: dogeSelectionController)
+            if #available(iOS 13.0, *) {
+                navigationController.isModalInPresentation = true
+            }
+            self.present(navigationController, animated: true, completion: nil)
+            return;
+        }
+    }
+    
+    func didDismiss() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

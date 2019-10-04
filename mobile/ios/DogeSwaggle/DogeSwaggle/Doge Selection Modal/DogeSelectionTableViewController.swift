@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DogeSelectionTableViewControllerDelegate: class {
+    func didDismiss()
+}
+
 class DogeSelectionTableViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating, UITextFieldDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -16,6 +20,8 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
     var filteredDogBreeds = [String]()
     
     var selectedIndexPath: IndexPath?
+    
+    weak var delegate: DogeSelectionTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +104,7 @@ class DogeSelectionTableViewController: UITableViewController, UISearchControlle
             UserDefaults.standard.set(selectedDogBreed, forKey: "dogType")
         }
         self.dismiss(animated: true, completion: nil)
+        self.delegate?.didDismiss()
     }
     
     // MARK: - Text field delegate
