@@ -26,7 +26,7 @@ enum PicFilter: Int {
     }
 }
 
- class PicFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+ class PicFeedViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var filterControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -96,7 +96,7 @@ enum PicFilter: Int {
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let isDogSitter = (currentFilter == .DogSitters && indexPath == IndexPath(item: 1, section: 0))
+        let isDogSitter = (currentFilter == .Trending && indexPath == IndexPath(item: 1, section: 0))
         let isPlaydate = (currentFilter == .PlayDates && indexPath == IndexPath(item: 7, section: 0))
         
         let cell = collectionView
@@ -149,3 +149,18 @@ extension PicFeedViewController : UICollectionViewDelegateFlowLayout {
   }
 }
 
+// MARK: - Collection View Delegate
+
+extension PicFeedViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if currentFilter == .Trending && indexPath == IndexPath(item: 1, section: 0) {
+            let profileViewController = ProfileViewController(typeString: "trending")
+            self.present(profileViewController, animated: true, completion: nil)
+
+        }
+        else if currentFilter == .PlayDates && indexPath == IndexPath(item: 7, section: 0) {
+            let profileViewController = ProfileViewController(typeString: "playdates")
+            self.present(profileViewController, animated: true, completion: nil)
+        }
+    }
+}
