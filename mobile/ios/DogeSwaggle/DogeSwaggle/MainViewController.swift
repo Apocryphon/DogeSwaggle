@@ -12,6 +12,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     
     var homeViewController: DogeHomeViewController
     var picFeedViewController: PicFeedViewController
+    var statsViewController: StatsViewController
     var hasShownIntro = false
     
     let selectedPinkColor = UIColor(red:0.93, green:0.18, blue:0.55, alpha:1.0)
@@ -38,6 +39,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         homeViewController = DogeHomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
         picFeedViewController = PicFeedViewController()
+        statsViewController = StatsViewController()
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -45,6 +47,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     required init?(coder: NSCoder) {
         homeViewController = DogeHomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
         picFeedViewController = PicFeedViewController()
+        statsViewController = StatsViewController()
 
         super.init(coder: coder)
     }
@@ -61,8 +64,13 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
                                           image: UIImage(named: "calendar.png"),
                                           selectedImage: nil)
         picFeedViewController.tabBarItem = picFeedBarItem
+        
+        let statsFeedBarItem = UITabBarItem(title: "Stats",
+                                          image: UIImage(named: "calendar.png"),
+                                          selectedImage: nil)
+        statsViewController.tabBarItem = statsFeedBarItem
 
-        self.viewControllers = [homeViewController, picFeedViewController]
+        self.viewControllers = [homeViewController, picFeedViewController, statsViewController]
     }
     
 }

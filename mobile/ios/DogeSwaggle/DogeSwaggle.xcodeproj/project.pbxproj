@@ -43,6 +43,8 @@
 		9317F7CE2346C00C009BD42B /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BC2346C00C009BD42B /* SF-Pro-Display-Black.otf */; };
 		9317F7CF2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BD2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf */; };
 		9317F7D02346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */; };
+		9317F7D423471D71009BD42B /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9317F7D223471D71009BD42B /* StatsViewController.swift */; };
+		9317F7D523471D71009BD42B /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7D323471D71009BD42B /* StatsViewController.xib */; };
 		93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C597BE2345A2DB0018435A /* dog_breeds.json */; };
 		93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */; };
 		93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */; };
@@ -94,6 +96,8 @@
 		9317F7BC2346C00C009BD42B /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		9317F7BD2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
 		9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
+		9317F7D223471D71009BD42B /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		9317F7D323471D71009BD42B /* StatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
 		93C597BE2345A2DB0018435A /* dog_breeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_breeds.json; sourceTree = "<group>"; };
 		93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewController.swift; sourceTree = "<group>"; };
 		93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogeSelectionTableViewController.xib; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				93C597BB2345A1CA0018435A /* Resources */,
 				93C597C4234653ED0018435A /* Doge Selection Modal */,
 				817FBF76234680500080DF2B /* Pup Pic Stream */,
+				9317F7D123471D43009BD42B /* Stats */,
 				8176FB2B23456FC600BC4122 /* AppDelegate.swift */,
 				814075A82346C1AD0038DA5D /* MainViewController.swift */,
 				8176FB2D23456FC600BC4122 /* FirstViewController.swift */,
@@ -226,6 +231,15 @@
 				9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		9317F7D123471D43009BD42B /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				9317F7D223471D71009BD42B /* StatsViewController.swift */,
+				9317F7D323471D71009BD42B /* StatsViewController.xib */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 		93C597BB2345A1CA0018435A /* Resources */ = {
@@ -339,6 +353,7 @@
 				9317F7C72346C00C009BD42B /* SF-Pro-Display-Semibold.otf in Resources */,
 				93C597D12346786F0018435A /* IntroViewController.xib in Resources */,
 				9317F7CA2346C00C009BD42B /* SF-Pro-Display-Ultralight.otf in Resources */,
+				9317F7D523471D71009BD42B /* StatsViewController.xib in Resources */,
 				817FBF822346A1850080DF2B /* PicFeedViewController.xib in Resources */,
 				93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */,
 				93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */,
@@ -412,6 +427,7 @@
 				814075A92346C1AD0038DA5D /* MainViewController.swift in Sources */,
 				817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */,
 				8176FB432345786900BC4122 /* Pet.swift in Sources */,
+				9317F7D423471D71009BD42B /* StatsViewController.swift in Sources */,
 				93C597CB234653ED0018435A /* DogeSelectionTableViewCell.swift in Sources */,
 				8176FB412345782A00BC4122 /* Owner.swift in Sources */,
 				93C597D423468DF30018435A /* ColorPalette.swift in Sources */,
