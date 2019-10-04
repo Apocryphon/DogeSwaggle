@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2875A94C874D97CCC6B81D20 /* Pods_DogeSwaggle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */; };
+		70A4B00F23467E2F009502E8 /* DogeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4B00E23467E2F009502E8 /* DogeHomeViewController.swift */; };
+		814075A92346C1AD0038DA5D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814075A82346C1AD0038DA5D /* MainViewController.swift */; };
 		8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2B23456FC600BC4122 /* AppDelegate.swift */; };
 		8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2D23456FC600BC4122 /* FirstViewController.swift */; };
-		8176FB3323456FC600BC4122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3123456FC600BC4122 /* Main.storyboard */; };
 		8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3423456FC800BC4122 /* Assets.xcassets */; };
 		8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */; };
 		8176FB412345782A00BC4122 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB402345782A00BC4122 /* Owner.swift */; };
 		8176FB432345786900BC4122 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB422345786900BC4122 /* Pet.swift */; };
-		8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB442345926700BC4122 /* PicFeedViewController.xib */; };
 		817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */; };
 		817FBF7A234681210080DF2B /* PupPicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */; };
 		9317F7BF2346C00C009BD42B /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7AD2346C00C009BD42B /* SF-Pro-Display-Thin.otf */; };
@@ -35,7 +36,9 @@
 		9317F7CE2346C00C009BD42B /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BC2346C00C009BD42B /* SF-Pro-Display-Black.otf */; };
 		9317F7CF2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BD2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf */; };
 		9317F7D02346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */; };
-		93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B92345835A0018435A /* PicFeedViewController.swift */; };
+		817FBF7E23468DE00080DF2B /* RandoDogImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */; };
+		817FBF802346A1720080DF2B /* PicFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF7F2346A1720080DF2B /* PicFeedViewController.swift */; };
+		817FBF822346A1850080DF2B /* PicFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817FBF812346A1850080DF2B /* PicFeedViewController.xib */; };
 		93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C597BE2345A2DB0018435A /* dog_breeds.json */; };
 		93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */; };
 		93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */; };
@@ -47,16 +50,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogeSwaggle.debug.xcconfig"; path = "Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle.debug.xcconfig"; sourceTree = "<group>"; };
+		42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogeSwaggle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogeSwaggle.release.xcconfig"; path = "Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle.release.xcconfig"; sourceTree = "<group>"; };
+		70A4B00E23467E2F009502E8 /* DogeHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeHomeViewController.swift; sourceTree = "<group>"; };
+		814075A82346C1AD0038DA5D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogeSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8176FB2B23456FC600BC4122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8176FB2D23456FC600BC4122 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8176FB3223456FC600BC4122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8176FB3423456FC800BC4122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8176FB3723456FC800BC4122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8176FB3923456FC800BC4122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8176FB402345782A00BC4122 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		8176FB422345786900BC4122 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
-		8176FB442345926700BC4122 /* PicFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicFeedViewController.xib; sourceTree = "<group>"; };
 		817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupPicCollectionViewCell.swift; sourceTree = "<group>"; };
 		817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PupPicCollectionViewCell.xib; sourceTree = "<group>"; };
 		9317F7AD2346C00C009BD42B /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
@@ -77,7 +83,9 @@
 		9317F7BC2346C00C009BD42B /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		9317F7BD2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
 		9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
-		93C597B92345835A0018435A /* PicFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicFeedViewController.swift; sourceTree = "<group>"; };
+		817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandoDogImageResponse.swift; sourceTree = "<group>"; };
+		817FBF7F2346A1720080DF2B /* PicFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicFeedViewController.swift; sourceTree = "<group>"; };
+		817FBF812346A1850080DF2B /* PicFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicFeedViewController.xib; sourceTree = "<group>"; };
 		93C597BE2345A2DB0018435A /* dog_breeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_breeds.json; sourceTree = "<group>"; };
 		93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewController.swift; sourceTree = "<group>"; };
 		93C597C6234653ED0018435A /* DogeSelectionTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogeSelectionTableViewController.xib; sourceTree = "<group>"; };
@@ -93,17 +101,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2875A94C874D97CCC6B81D20 /* Pods_DogeSwaggle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1566FCC76CD84EFDD3E526 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42C9744233835E306CB28C0D /* Pods_DogeSwaggle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8176FB1F23456FC600BC4122 = {
 			isa = PBXGroup;
 			children = (
 				8176FB2A23456FC600BC4122 /* DogeSwaggle */,
 				8176FB2923456FC600BC4122 /* Products */,
+				87AFCAEAD7284CC71BB8E038 /* Pods */,
+				2C1566FCC76CD84EFDD3E526 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,9 +143,10 @@
 				93C597C4234653ED0018435A /* Doge Selection Modal */,
 				817FBF76234680500080DF2B /* Pup Pic Stream */,
 				8176FB2B23456FC600BC4122 /* AppDelegate.swift */,
+				814075A82346C1AD0038DA5D /* MainViewController.swift */,
 				8176FB2D23456FC600BC4122 /* FirstViewController.swift */,
+				70A4B00E23467E2F009502E8 /* DogeHomeViewController.swift */,
 				8176FB3F2345775100BC4122 /* Models */,
-				8176FB3123456FC600BC4122 /* Main.storyboard */,
 				8176FB3423456FC800BC4122 /* Assets.xcassets */,
 				8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */,
 				8176FB3923456FC800BC4122 /* Info.plist */,
@@ -139,6 +159,7 @@
 			children = (
 				8176FB402345782A00BC4122 /* Owner.swift */,
 				8176FB422345786900BC4122 /* Pet.swift */,
+				817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,8 +167,8 @@
 		817FBF76234680500080DF2B /* Pup Pic Stream */ = {
 			isa = PBXGroup;
 			children = (
-				93C597B92345835A0018435A /* PicFeedViewController.swift */,
-				8176FB442345926700BC4122 /* PicFeedViewController.xib */,
+				817FBF7F2346A1720080DF2B /* PicFeedViewController.swift */,
+				817FBF812346A1850080DF2B /* PicFeedViewController.xib */,
 				817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */,
 				817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */,
 			);
@@ -177,6 +198,15 @@
 				9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */,
 			);
 			path = fonts;
+				sourceTree = "<group>";
+		};
+		87AFCAEAD7284CC71BB8E038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */,
+				5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		93C597BB2345A1CA0018435A /* Resources */ = {
@@ -223,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8176FB3C23456FC800BC4122 /* Build configuration list for PBXNativeTarget "DogeSwaggle" */;
 			buildPhases = (
+				384962EB8CB173EFD4D2D747 /* [CP] Check Pods Manifest.lock */,
 				8176FB2423456FC600BC4122 /* Sources */,
 				8176FB2523456FC600BC4122 /* Frameworks */,
 				8176FB2623456FC600BC4122 /* Resources */,
+				29F459DAED7CE2F97ED960DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,7 +311,6 @@
 				9317F7C62346C00C009BD42B /* SF-Pro-Display-Heavy.otf in Resources */,
 				9317F7C82346C00C009BD42B /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */,
-				8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */,
 				93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */,
 				9317F7C22346C00C009BD42B /* SF-Pro-Display-Light.otf in Resources */,
 				9317F7CE2346C00C009BD42B /* SF-Pro-Display-Black.otf in Resources */,
@@ -288,6 +319,7 @@
 				9317F7C72346C00C009BD42B /* SF-Pro-Display-Semibold.otf in Resources */,
 				93C597D12346786F0018435A /* IntroViewController.xib in Resources */,
 				9317F7CA2346C00C009BD42B /* SF-Pro-Display-Ultralight.otf in Resources */,
+				817FBF822346A1850080DF2B /* PicFeedViewController.xib in Resources */,
 				93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */,
 				93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */,
 				9317F7C52346C00C009BD42B /* SF-Pro-Display-Medium.otf in Resources */,
@@ -299,26 +331,70 @@
 				8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */,
 				9317F7C32346C00C009BD42B /* SF-Pro-Display-Regular.otf in Resources */,
 				9317F7CC2346C00C009BD42B /* SF-Pro-Display-LightItalic.otf in Resources */,
-				8176FB3323456FC600BC4122 /* Main.storyboard in Resources */,
 				9317F7C92346C00C009BD42B /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29F459DAED7CE2F97ED960DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DogeSwaggle/Pods-DogeSwaggle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		384962EB8CB173EFD4D2D747 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DogeSwaggle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8176FB2423456FC600BC4122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */,
+				817FBF7E23468DE00080DF2B /* RandoDogImageResponse.swift in Sources */,
+				814075A92346C1AD0038DA5D /* MainViewController.swift in Sources */,
 				817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */,
 				8176FB432345786900BC4122 /* Pet.swift in Sources */,
 				93C597CB234653ED0018435A /* DogeSelectionTableViewCell.swift in Sources */,
 				8176FB412345782A00BC4122 /* Owner.swift in Sources */,
 				93C597D423468DF30018435A /* ColorPalette.swift in Sources */,
+				817FBF802346A1720080DF2B /* PicFeedViewController.swift in Sources */,
 				8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */,
 				8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */,
+				70A4B00F23467E2F009502E8 /* DogeHomeViewController.swift in Sources */,
 				93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */,
 				93C597D02346786F0018435A /* IntroViewController.swift in Sources */,
 			);
@@ -327,14 +403,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8176FB3123456FC600BC4122 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8176FB3223456FC600BC4122 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8176FB3623456FC800BC4122 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -464,6 +532,7 @@
 		};
 		8176FB3D23456FC800BC4122 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3014E70B96796EFC1920A766 /* Pods-DogeSwaggle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +550,7 @@
 		};
 		8176FB3E23456FC800BC4122 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2D1E2DB674A4C96E35C048 /* Pods-DogeSwaggle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
