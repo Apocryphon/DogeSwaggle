@@ -12,10 +12,13 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     
     var homeViewController: DogeHomeViewController
     var picFeedViewController: PicFeedViewController
+    
+    let selectedPinkColor = UIColor(red:0.93, green:0.18, blue:0.55, alpha:1.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        UITabBar.appearance().tintColor = selectedPinkColor
     }
     
     
@@ -37,19 +40,16 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewWillAppear(animated)
         
         let homeBarItem = UITabBarItem(title: "Home",
-                                         image: UIImage(named: "defaultImage.png"),
-                                         selectedImage: UIImage(named: "selectedImage.png"))
-        
+                                         image: UIImage(named: "home.png"),
+                                         selectedImage: nil)
         homeViewController.tabBarItem = homeBarItem
         
-        
         let picFeedBarItem = UITabBarItem(title: "Book",
-                                          image: UIImage(named: "defaultImage2.png"),
-                                          selectedImage: UIImage(named: "selectedImage2.png"))
+                                          image: UIImage(named: "calendar.png"),
+                                          selectedImage: nil)
         picFeedViewController.tabBarItem = picFeedBarItem
-        
-        
+
         self.viewControllers = [homeViewController, picFeedViewController]
     }
-
+    
 }

@@ -11,12 +11,15 @@ import SDWebImage
 
  class PicFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var filterControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
 
     private let reuseIdentifier = "kPupCell"
     private let itemsPerRow: CGFloat = 3
+    
+    let waitingGray = UIColor(red:0.90, green:0.89, blue:0.92, alpha:1.0)
      
-    private let sectionInsets = UIEdgeInsets(top: 50.0,
+    private let sectionInsets = UIEdgeInsets(top: 0.0,
                                              left: 15.0,
                                              bottom: 50.0,
                                              right: 15.0)
@@ -54,6 +57,22 @@ import SDWebImage
         }
         task.resume()
     }
+   
+    // MARK: - UISegmentedControl
+    @IBAction func filterControlDidChange(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            searchBar.placeholder = "Trending"
+        case 1:
+            searchBar.placeholder = "Dog sitters"
+        case 2:
+            searchBar.placeholder = "Play dates"
+        default:
+            searchBar.placeholder = "Recent"        
+        }
+        fetchDogImages()
+    }
+    
     
     
     // MARK: - UICollectionViewDataSource
@@ -70,7 +89,7 @@ import SDWebImage
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PupPicCollectionViewCell
-        cell.backgroundColor = .black
+        cell.backgroundColor = waitingGray
         guard let dogImageUrlString = imageUrls[indexPath.row], let dogImageUrl = URL(string: dogImageUrlString)
             else { return cell }
         cell.pupImageView.sd_setImage(with: dogImageUrl,
@@ -79,7 +98,6 @@ import SDWebImage
 
         return cell
     }
-
  }
 
 // MARK: - Collection View Flow Layout Delegate

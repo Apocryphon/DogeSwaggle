@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PicFeedViewController" customModule="DogeSwaggle" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="J0X-bk-B3Z" id="sRR-4y-VDS"/>
+                <outlet property="filterControl" destination="UOO-Wl-zGh" id="mKO-Co-OHI"/>
                 <outlet property="searchBar" destination="n2E-uY-dew" id="XjH-Hr-NBI"/>
                 <outlet property="view" destination="UTZ-sl-1LK" id="mpq-Sg-LJ4"/>
             </connections>
@@ -19,14 +20,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2E-uY-dew">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <searchBar contentMode="redraw" placeholder="Trending" translatesAutoresizingMaskIntoConstraints="NO" id="n2E-uY-dew">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="7uT-Zk-R0D"/>
+                    </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-bk-B3Z">
-                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="UOO-Wl-zGh">
+                    <rect key="frame" x="0.0" y="97" width="414" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <segments>
+                        <segment title="Trending"/>
+                        <segment title="Dog sitters"/>
+                        <segment title="Play dates"/>
+                        <segment title="Recent"/>
+                    </segments>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="selectedSegmentTintColor" red="0.90196078431372551" green="0.89411764705882346" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="filterControlDidChange:" destination="-1" eventType="valueChanged" id="hSj-sY-ATI"/>
+                    </connections>
+                </segmentedControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-bk-B3Z">
+                    <rect key="frame" x="0.0" y="151" width="414" height="745"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4EO-rz-4hi">
                         <size key="itemSize" width="113" height="113"/>
@@ -37,6 +55,16 @@
                 </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="J0X-bk-B3Z" firstAttribute="top" secondItem="UOO-Wl-zGh" secondAttribute="bottom" constant="10" id="DhF-CQ-2w5"/>
+                <constraint firstItem="n2E-uY-dew" firstAttribute="top" secondItem="8g5-4l-bui" secondAttribute="top" id="HgH-RN-2He"/>
+                <constraint firstItem="J0X-bk-B3Z" firstAttribute="leading" secondItem="8g5-4l-bui" secondAttribute="leading" id="eAa-bq-jBL"/>
+                <constraint firstItem="J0X-bk-B3Z" firstAttribute="centerX" secondItem="8g5-4l-bui" secondAttribute="centerX" id="gDW-uW-PyX"/>
+                <constraint firstItem="UOO-Wl-zGh" firstAttribute="top" secondItem="n2E-uY-dew" secondAttribute="bottom" constant="10" id="hrS-y5-EbN"/>
+                <constraint firstItem="n2E-uY-dew" firstAttribute="centerX" secondItem="8g5-4l-bui" secondAttribute="centerX" id="icA-qx-eIS"/>
+                <constraint firstItem="J0X-bk-B3Z" firstAttribute="bottom" secondItem="8g5-4l-bui" secondAttribute="bottom" constant="34" id="icS-Bj-HH8"/>
+                <constraint firstItem="n2E-uY-dew" firstAttribute="width" secondItem="UTZ-sl-1LK" secondAttribute="width" id="nkj-CT-uAu"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="8g5-4l-bui"/>
             <point key="canvasLocation" x="-517.39130434782612" y="52.901785714285715"/>
         </view>
