@@ -17,6 +17,24 @@
 		8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB442345926700BC4122 /* PicFeedViewController.xib */; };
 		817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */; };
 		817FBF7A234681210080DF2B /* PupPicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */; };
+		9317F7BF2346C00C009BD42B /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7AD2346C00C009BD42B /* SF-Pro-Display-Thin.otf */; };
+		9317F7C02346C00C009BD42B /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7AE2346C00C009BD42B /* SF-Pro-Display-SemiboldItalic.otf */; };
+		9317F7C12346C00C009BD42B /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7AF2346C00C009BD42B /* SF-Pro-Display-RegularItalic.otf */; };
+		9317F7C22346C00C009BD42B /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B02346C00C009BD42B /* SF-Pro-Display-Light.otf */; };
+		9317F7C32346C00C009BD42B /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B12346C00C009BD42B /* SF-Pro-Display-Regular.otf */; };
+		9317F7C42346C00C009BD42B /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B22346C00C009BD42B /* SF-Pro-Display-Bold.otf */; };
+		9317F7C52346C00C009BD42B /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B32346C00C009BD42B /* SF-Pro-Display-Medium.otf */; };
+		9317F7C62346C00C009BD42B /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B42346C00C009BD42B /* SF-Pro-Display-Heavy.otf */; };
+		9317F7C72346C00C009BD42B /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B52346C00C009BD42B /* SF-Pro-Display-Semibold.otf */; };
+		9317F7C82346C00C009BD42B /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B62346C00C009BD42B /* SF-Pro-Display-MediumItalic.otf */; };
+		9317F7C92346C00C009BD42B /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B72346C00C009BD42B /* SF-Pro-Display-HeavyItalic.otf */; };
+		9317F7CA2346C00C009BD42B /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B82346C00C009BD42B /* SF-Pro-Display-Ultralight.otf */; };
+		9317F7CB2346C00C009BD42B /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7B92346C00C009BD42B /* SF-Pro-Display-UltralightItalic.otf */; };
+		9317F7CC2346C00C009BD42B /* SF-Pro-Display-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BA2346C00C009BD42B /* SF-Pro-Display-LightItalic.otf */; };
+		9317F7CD2346C00C009BD42B /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BB2346C00C009BD42B /* SF-Pro-Display-BlackItalic.otf */; };
+		9317F7CE2346C00C009BD42B /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BC2346C00C009BD42B /* SF-Pro-Display-Black.otf */; };
+		9317F7CF2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BD2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf */; };
+		9317F7D02346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */; };
 		93C597BA2345835A0018435A /* PicFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597B92345835A0018435A /* PicFeedViewController.swift */; };
 		93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C597BE2345A2DB0018435A /* dog_breeds.json */; };
 		93C597C9234653ED0018435A /* DogeSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */; };
@@ -41,6 +59,24 @@
 		8176FB442345926700BC4122 /* PicFeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicFeedViewController.xib; sourceTree = "<group>"; };
 		817FBF77234680B60080DF2B /* PupPicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupPicCollectionViewCell.swift; sourceTree = "<group>"; };
 		817FBF79234681210080DF2B /* PupPicCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PupPicCollectionViewCell.xib; sourceTree = "<group>"; };
+		9317F7AD2346C00C009BD42B /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
+		9317F7AE2346C00C009BD42B /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		9317F7AF2346C00C009BD42B /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
+		9317F7B02346C00C009BD42B /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		9317F7B12346C00C009BD42B /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		9317F7B22346C00C009BD42B /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		9317F7B32346C00C009BD42B /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		9317F7B42346C00C009BD42B /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		9317F7B52346C00C009BD42B /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		9317F7B62346C00C009BD42B /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; };
+		9317F7B72346C00C009BD42B /* SF-Pro-Display-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-HeavyItalic.otf"; sourceTree = "<group>"; };
+		9317F7B82346C00C009BD42B /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		9317F7B92346C00C009BD42B /* SF-Pro-Display-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-UltralightItalic.otf"; sourceTree = "<group>"; };
+		9317F7BA2346C00C009BD42B /* SF-Pro-Display-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-LightItalic.otf"; sourceTree = "<group>"; };
+		9317F7BB2346C00C009BD42B /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
+		9317F7BC2346C00C009BD42B /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
+		9317F7BD2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
+		9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
 		93C597B92345835A0018435A /* PicFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicFeedViewController.swift; sourceTree = "<group>"; };
 		93C597BE2345A2DB0018435A /* dog_breeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_breeds.json; sourceTree = "<group>"; };
 		93C597C5234653ED0018435A /* DogeSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogeSelectionTableViewController.swift; sourceTree = "<group>"; };
@@ -118,9 +154,35 @@
 			path = "Pup Pic Stream";
 			sourceTree = "<group>";
 		};
+		9317F7AC2346C00C009BD42B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9317F7AD2346C00C009BD42B /* SF-Pro-Display-Thin.otf */,
+				9317F7AE2346C00C009BD42B /* SF-Pro-Display-SemiboldItalic.otf */,
+				9317F7AF2346C00C009BD42B /* SF-Pro-Display-RegularItalic.otf */,
+				9317F7B02346C00C009BD42B /* SF-Pro-Display-Light.otf */,
+				9317F7B12346C00C009BD42B /* SF-Pro-Display-Regular.otf */,
+				9317F7B22346C00C009BD42B /* SF-Pro-Display-Bold.otf */,
+				9317F7B32346C00C009BD42B /* SF-Pro-Display-Medium.otf */,
+				9317F7B42346C00C009BD42B /* SF-Pro-Display-Heavy.otf */,
+				9317F7B52346C00C009BD42B /* SF-Pro-Display-Semibold.otf */,
+				9317F7B62346C00C009BD42B /* SF-Pro-Display-MediumItalic.otf */,
+				9317F7B72346C00C009BD42B /* SF-Pro-Display-HeavyItalic.otf */,
+				9317F7B82346C00C009BD42B /* SF-Pro-Display-Ultralight.otf */,
+				9317F7B92346C00C009BD42B /* SF-Pro-Display-UltralightItalic.otf */,
+				9317F7BA2346C00C009BD42B /* SF-Pro-Display-LightItalic.otf */,
+				9317F7BB2346C00C009BD42B /* SF-Pro-Display-BlackItalic.otf */,
+				9317F7BC2346C00C009BD42B /* SF-Pro-Display-Black.otf */,
+				9317F7BD2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf */,
+				9317F7BE2346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		93C597BB2345A1CA0018435A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9317F7AC2346C00C009BD42B /* fonts */,
 				93C597BE2345A2DB0018435A /* dog_breeds.json */,
 			);
 			path = Resources;
@@ -212,15 +274,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9317F7CF2346C00C009BD42B /* SF-Pro-Display-ThinItalic.otf in Resources */,
+				9317F7BF2346C00C009BD42B /* SF-Pro-Display-Thin.otf in Resources */,
+				9317F7C62346C00C009BD42B /* SF-Pro-Display-Heavy.otf in Resources */,
+				9317F7C82346C00C009BD42B /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				8176FB3823456FC800BC4122 /* LaunchScreen.storyboard in Resources */,
 				8176FB452345926700BC4122 /* PicFeedViewController.xib in Resources */,
 				93C597BF2345A2DC0018435A /* dog_breeds.json in Resources */,
+				9317F7C22346C00C009BD42B /* SF-Pro-Display-Light.otf in Resources */,
+				9317F7CE2346C00C009BD42B /* SF-Pro-Display-Black.otf in Resources */,
+				9317F7CD2346C00C009BD42B /* SF-Pro-Display-BlackItalic.otf in Resources */,
+				9317F7CB2346C00C009BD42B /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				9317F7C72346C00C009BD42B /* SF-Pro-Display-Semibold.otf in Resources */,
 				93C597D12346786F0018435A /* IntroViewController.xib in Resources */,
+				9317F7CA2346C00C009BD42B /* SF-Pro-Display-Ultralight.otf in Resources */,
 				93C597CC234653ED0018435A /* DogeSelectionTableViewCell.xib in Resources */,
 				93C597CA234653ED0018435A /* DogeSelectionTableViewController.xib in Resources */,
+				9317F7C52346C00C009BD42B /* SF-Pro-Display-Medium.otf in Resources */,
+				9317F7C02346C00C009BD42B /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
+				9317F7D02346C00C009BD42B /* SF-Pro-Display-BoldItalic.otf in Resources */,
+				9317F7C12346C00C009BD42B /* SF-Pro-Display-RegularItalic.otf in Resources */,
 				817FBF7A234681210080DF2B /* PupPicCollectionViewCell.xib in Resources */,
+				9317F7C42346C00C009BD42B /* SF-Pro-Display-Bold.otf in Resources */,
 				8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */,
+				9317F7C32346C00C009BD42B /* SF-Pro-Display-Regular.otf in Resources */,
+				9317F7CC2346C00C009BD42B /* SF-Pro-Display-LightItalic.otf in Resources */,
 				8176FB3323456FC600BC4122 /* Main.storyboard in Resources */,
+				9317F7C92346C00C009BD42B /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

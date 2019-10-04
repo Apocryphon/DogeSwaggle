@@ -9,13 +9,19 @@
 import UIKit
 
 class IntroViewController: UIViewController {
-
+    @IBOutlet var signUpButton: UIButton!
+    @IBOutlet var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        signUpButton.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.98, alpha: 1)
+        signUpButton.layer.cornerRadius = 8
+        loginButton.backgroundColor = UIColor.Purple.dark
+        loginButton.layer.cornerRadius = 8
     }
-
 
     /*
     // MARK: - Navigation
@@ -26,5 +32,13 @@ class IntroViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        print("\(#function)")
+    }
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        print("\(#function)")
+    }
+    
 }
