@@ -33,7 +33,7 @@ enum DogCategory: Int, CaseIterable {
         case .Restaurants:
             return ["Outerlands", "Skool", "Surisan"]
         case .Destinations:
-            return ["Hong Kong flight", "Seattle Flight", "Amsterdam flight"]
+            return ["NYC", "Hong Kong flight", "Seattle Flight", "Amsterdam flight"]
         case .Hotels:
             return ["Grand Hyatt SF", "Hotel Abri"]
         case .Parks:
