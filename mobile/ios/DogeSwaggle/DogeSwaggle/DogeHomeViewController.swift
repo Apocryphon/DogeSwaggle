@@ -73,6 +73,7 @@ class DogeHomeViewController: UICollectionViewController {
     
     private var parks = [Park]()
     private var clinics = [Clinic]()
+    private var airlineData = [AirlineData]()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -109,6 +110,7 @@ class DogeHomeViewController: UICollectionViewController {
         super.viewDidLoad()
         getDogParks()
         getPetClinics()
+        getAirports()
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -222,6 +224,30 @@ extension DogeHomeViewController {
         task.resume()
 
     }
+    
+    // MARK: United API
+    
+    func getAirports() {
+           let getAirports = URL(string:"https://dogswaggle.herokuapp.com/flights")!
+           let task = URLSession.shared.dataTask(with: getAirports) { (data, response, error) in
+               guard error == nil else { return }
+               guard let data = data else { return }
+
+               do {
+                   let airlineResponse = try JSONDecoder().decode([AirlineData].self, from: data)
+                   if airlineResponse.count >= 4 {
+                       self.airlineData = Array(airlineResponse.prefix(4))
+                   }
+                   DispatchQueue.main.async {
+                       self.collectionView.reloadData()
+                   }
+               } catch {
+                   
+               }
+           }
+           task.resume()
+       }
+    
 }
 
 class DogCollectionCell: UICollectionViewCell {
