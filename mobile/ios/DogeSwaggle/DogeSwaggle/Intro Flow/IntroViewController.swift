@@ -47,9 +47,9 @@ class IntroViewController: UIViewController, DogeSelectionTableViewControllerDel
     }
     
     func showDogSelection() -> Void {
-        if UserDefaults.standard.string(forKey: "dogType") != nil {
-            self.dismiss(animated: true, completion: nil)
-        } else {
+//        if UserDefaults.standard.string(forKey: "dogType") != nil {
+//            self.dismiss(animated: true, completion: nil)
+//        } else {
             let dogeSelectionController = DogeSelectionTableViewController(nibName: "DogeSelectionTableViewController", bundle: nil)
             dogeSelectionController.delegate = self
             let navigationController = UINavigationController(rootViewController: dogeSelectionController)
@@ -58,7 +58,7 @@ class IntroViewController: UIViewController, DogeSelectionTableViewControllerDel
             }
             self.present(navigationController, animated: true, completion: nil)
             return;
-        }
+//        }
     }
     
     func didDismiss() {
