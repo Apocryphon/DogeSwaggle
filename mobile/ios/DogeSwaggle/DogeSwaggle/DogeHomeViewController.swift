@@ -11,7 +11,7 @@ import UIKit
 import CoreLocation
 
 enum DogCategory: Int, CaseIterable {
-    case HeaderQuestion, Restaurants, Destinations, Hotels, Parks
+    case HeaderQuestion, Restaurants, Destinations, Hotels, Parks, Clinics
     
     var name: String {
         switch self {
@@ -25,6 +25,8 @@ enum DogCategory: Int, CaseIterable {
             return "Pet Friendly Hotels"
         case .Parks:
             return "Dog Parks"
+        case .Clinics:
+            return "Pet Clinics"
         }
     }
     
@@ -38,6 +40,8 @@ enum DogCategory: Int, CaseIterable {
             return ["Grand Hyatt SF", "Hotel Abri"]
         case .Parks:
             return ["Park1", "Park2", "Park3", "Park4"]
+        case .Clinics:
+            return ["Clinic1", "Clinic2", "Clinic3"]
         default:
             return []
         }
@@ -59,6 +63,8 @@ extension DogeHomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: collectionView.frame.width, height: 176)
         case .Parks:
             return CGSize(width: collectionView.frame.width, height: 400)
+        case .Clinics:
+            return CGSize(width: collectionView.frame.width, height: indexPath.row == 0 ? 176 : 374)
         }
     }
 }
@@ -66,6 +72,7 @@ extension DogeHomeViewController: UICollectionViewDelegateFlowLayout {
 class DogeHomeViewController: UICollectionViewController {
     
     private var parks = [Park]()
+    private var clinics = [Clinic]()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -100,8 +107,8 @@ class DogeHomeViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         getDogParks()
+        getPetClinics()
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -129,6 +136,9 @@ class DogeHomeViewController: UICollectionViewController {
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rowCell", for: indexPath) as! DogCollectionCell
             cell.dogCategory = DogCategory(rawValue: indexPath.section)
+            if indexPath.section == DogCategory.Clinics.rawValue {
+                cell.models = self.clinics
+            }
             cell.setupStack()
             return cell
         }
@@ -147,6 +157,8 @@ class DogeHomeViewController: UICollectionViewController {
         case .Hotels:
             return 1
         case .Parks:
+            return 1
+        case .Clinics:
             return 1
         default:
             print("no dog")
@@ -188,12 +200,38 @@ extension DogeHomeViewController {
         }
         task.resume()
     }
+    
+    func getPetClinics() {
+        let getClinicsUrl = URL(string:"https://kinship-fd251.firebaseapp.com/api/v1/banfield-locations/")!
+        let task = URLSession.shared.dataTask(with: getClinicsUrl) { (data, response, error) in
+            guard error == nil else { return }
+            guard let data = data else { return }
+
+            do {
+                let clinicalResponse = try JSONDecoder().decode([Clinic].self, from: data)
+                if clinicalResponse.count >= 3 {
+                    self.clinics = Array(clinicalResponse.prefix(3))
+                }
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            } catch {
+                
+            }
+        }
+        task.resume()
+
+    }
 }
 
 class DogCollectionCell: UICollectionViewCell {
     var dogCategory: DogCategory?
+    var models: [Any?]
+
+    let mosconeCoordinates = CLLocation(latitude: 37.783863055111, longitude: 122.401261925697)
     
     override init(frame: CGRect) {
+        models = []
         super.init(frame: frame)
         self.backgroundColor = .white
     }
@@ -208,20 +246,48 @@ class DogCollectionCell: UICollectionViewCell {
         self.contentView.addSubview(scroller)
         scroller.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
 
-        for name in category.imageNames {
+        for (index, name) in category.imageNames.enumerated() {
             let view = UIImageView(image: UIImage(named: name))
             view.frame = CGRect(x: 0, y: 0, width: view.intrinsicContentSize.width, height: view.intrinsicContentSize.height)
             view.contentMode = .scaleAspectFit
             scroller.stackView.addArrangedSubview(view)
+            
+            if category.rawValue == DogCategory.Clinics.rawValue {
+                guard models.count > 0 else { return }
+
+                // todo: placeholders?
+                if let clinic = models[index] as? Clinic {
+                    let nameLabel = UILabel(frame: view.frame)
+                    nameLabel.font = UIFont.boldSystemFont(ofSize: 13.0)
+                    nameLabel.textColor = UIColor.white
+                    nameLabel.center = CGPoint(x: view.frame.minX + view.frame.size.width / 2, y: view.frame.minY + view.frame.size.height * 0.75)
+                    nameLabel.numberOfLines = 0
+                    nameLabel.textAlignment = NSTextAlignment.center
+
+                    nameLabel.text = clinic.location
+                    view.addSubview(nameLabel)
+
+                    if let docLat = Double(clinic.latitude), let docLong = Double(clinic.longitude) {
+                        let docCoordinates = CLLocation(latitude: docLat, longitude: docLong)
+                        let distance = mosconeCoordinates.distance(from: docCoordinates) * 0.0000001
+                        let distanceLabel = UILabel(frame: view.frame)
+                        distanceLabel.font = UIFont.boldSystemFont(ofSize: 10.0)
+                        distanceLabel.textColor = UIColor.white
+                        distanceLabel.center = CGPoint(x: nameLabel.center.x, y: view.frame.minY + view.frame.size.height * 0.75 + 18.0)
+                        distanceLabel.numberOfLines = 0
+                        distanceLabel.textAlignment = NSTextAlignment.center
+                        let milesAway: String = String(format:"%.1f", distance)
+                        distanceLabel.text = "\(milesAway) mi."
+                        view.addSubview(distanceLabel)
+                    }
+                }
+            }
         }
     }
 }
 
 class DogCollectionBoxCell: DogCollectionCell {
-    var models: [Any?]
-
     override init(frame: CGRect) {
-        models = []
         super.init(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height * 2 + 50))
         self.backgroundColor = .white
     }
@@ -241,8 +307,6 @@ class DogCollectionBoxCell: DogCollectionCell {
             let fixedWidth = 168
             let fixedHeight = 190
             let fixedSpace = 10
-            
-            let mosconeCoordinates = CLLocation(latitude: 37.783863055111, longitude: 122.401261925697)
             
             switch index {
             case 0:
@@ -286,7 +350,6 @@ class DogCollectionBoxCell: DogCollectionCell {
                     }
                 }
             }
-
         }
     }
 }
