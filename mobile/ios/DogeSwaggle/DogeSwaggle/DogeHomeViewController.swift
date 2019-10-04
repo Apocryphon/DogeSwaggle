@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-enum DogCategory: Int {
-    case HeaderQuestion, Restaurants, Destinations, Hotels, Clinics
+enum DogCategory: Int, CaseIterable {
+    case HeaderQuestion, Restaurants, Destinations, Hotels, Parks
     
     var name: String {
         switch self {
@@ -22,8 +22,8 @@ enum DogCategory: Int {
             return "Pet Friendly Destinations"
         case .Hotels:
             return "Pet Friendly Hotels"
-        case .Clinics:
-            return "Pet Clinics"
+        case .Parks:
+            return "Dog Parks"
         }
     }
     
@@ -35,7 +35,7 @@ enum DogCategory: Int {
             return ["Hong Kong flight", "Seattle Flight", "Amsterdam flight"]
         case .Hotels:
             return ["Grand Hyatt SF", "Hotel Abri"]
-        case .Clinics:
+        case .Parks:
             return ["Outerlands", "Skool", "Surisan"]
         default:
             return []
@@ -55,7 +55,7 @@ extension DogeHomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: collectionView.frame.width, height: 190)
         case .Hotels:
             return CGSize(width: collectionView.frame.width, height: 176)
-        case .Clinics:
+        case .Parks:
             return CGSize(width: collectionView.frame.width, height: 246)
         }
     }
@@ -93,6 +93,12 @@ class DogeHomeViewController: UICollectionViewController {
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        getDogParks()
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 0 {
@@ -108,11 +114,10 @@ class DogeHomeViewController: UICollectionViewController {
             cell.setupStack()
             return cell
         }
-        return UICollectionViewCell()
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return DogCategory.allCases.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -123,7 +128,7 @@ class DogeHomeViewController: UICollectionViewController {
             return 1
         case .Hotels:
             return 1
-        case .Clinics:
+        case .Parks:
             return 1
         default:
             print("no dog")
@@ -140,6 +145,28 @@ class DogeHomeViewController: UICollectionViewController {
             return headerView
         }
         return UICollectionReusableView()
+    }
+}
+
+extension DogeHomeViewController {
+    // MARK: - Kinship API
+    func getDogParks() {
+        let getDogParksUrl = URL(string:"https://kinship-fd251.firebaseapp.com/api/v1/dog-parks")!
+        let task = URLSession.shared.dataTask(with: getDogParksUrl) { (data, response, error) in
+            guard error == nil else { return }
+            guard let data = data else { return }
+
+            do {
+                let parks = try JSONDecoder().decode([Park].self, from: data)
+                print(parks)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            } catch {
+                
+            }
+        }
+        task.resume()
     }
 }
 

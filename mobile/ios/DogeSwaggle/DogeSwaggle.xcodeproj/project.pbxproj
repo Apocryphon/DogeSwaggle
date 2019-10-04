@@ -12,6 +12,7 @@
 		814075A92346C1AD0038DA5D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814075A82346C1AD0038DA5D /* MainViewController.swift */; };
 		814075B52346D6640038DA5D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 814075B32346D6640038DA5D /* home.png */; };
 		814075B62346D6640038DA5D /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 814075B42346D6640038DA5D /* calendar.png */; };
+		814075B82346EDB40038DA5D /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814075B72346EDB40038DA5D /* Park.swift */; };
 		8176FB2C23456FC600BC4122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2B23456FC600BC4122 /* AppDelegate.swift */; };
 		8176FB2E23456FC600BC4122 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176FB2D23456FC600BC4122 /* FirstViewController.swift */; };
 		8176FB3523456FC800BC4122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8176FB3423456FC800BC4122 /* Assets.xcassets */; };
@@ -59,7 +60,8 @@
 		814075A82346C1AD0038DA5D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		814075B32346D6640038DA5D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		814075B42346D6640038DA5D /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
-		8176FB2823456FC600BC4122 /* DogSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		814075B72346EDB40038DA5D /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
+		8176FB2823456FC600BC4122 /* DogeSwaggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogeSwaggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8176FB2B23456FC600BC4122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8176FB2D23456FC600BC4122 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		8176FB3423456FC800BC4122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				8176FB402345782A00BC4122 /* Owner.swift */,
 				8176FB422345786900BC4122 /* Pet.swift */,
 				817FBF7D23468DE00080DF2B /* RandoDogImageResponse.swift */,
+				814075B72346EDB40038DA5D /* Park.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				817FBF7E23468DE00080DF2B /* RandoDogImageResponse.swift in Sources */,
+				814075B82346EDB40038DA5D /* Park.swift in Sources */,
 				814075A92346C1AD0038DA5D /* MainViewController.swift in Sources */,
 				817FBF78234680B60080DF2B /* PupPicCollectionViewCell.swift in Sources */,
 				8176FB432345786900BC4122 /* Pet.swift in Sources */,
