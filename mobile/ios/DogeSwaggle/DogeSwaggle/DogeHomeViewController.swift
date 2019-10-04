@@ -113,9 +113,16 @@ class DogeHomeViewController: UICollectionViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageHeader", for: indexPath) as! ImageHeader
             return cell
         }
-        if indexPath.section == DogCategory.Destinations.rawValue || indexPath.section == DogCategory.Parks.rawValue {
+        if indexPath.section == DogCategory.Destinations.rawValue {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "boxCell", for: indexPath) as! DogCollectionBoxCell
             cell.dogCategory = DogCategory(rawValue: indexPath.section)
+            cell.setupStack()
+            return cell
+        }
+        if indexPath.section == DogCategory.Parks.rawValue {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "boxCell", for: indexPath) as! DogCollectionBoxCell
+            cell.dogCategory = DogCategory(rawValue: indexPath.section)
+            cell.models = self.parks
             cell.setupStack()
             return cell
         } else {
@@ -210,7 +217,10 @@ class DogCollectionCell: UICollectionViewCell {
 }
 
 class DogCollectionBoxCell: DogCollectionCell {
+    var models: [Any?]
+
     override init(frame: CGRect) {
+        models = []
         super.init(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height * 2 + 50))
         self.backgroundColor = .white
     }
@@ -242,6 +252,21 @@ class DogCollectionBoxCell: DogCollectionCell {
                 view.frame = CGRect(x: fixedMargin + fixedWidth + fixedSpace, y: fixedHeight + fixedSpace, width: fixedWidth, height: fixedHeight)
             }
             self.contentView.addSubview(view)
+            
+            if category.rawValue == DogCategory.Parks.rawValue {
+                let nameLabel = UILabel(frame: view.frame)
+                nameLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+                nameLabel.textColor = UIColor.white
+                nameLabel.center = CGPoint(x: view.frame.minX + view.frame.size.width / 2, y: view.frame.minY + view.frame.size.height * 0.75)
+                nameLabel.numberOfLines = 0
+                nameLabel.textAlignment = NSTextAlignment.center
+
+                if let park = models[index] as? Park {
+                    nameLabel.text = park.name
+                }
+                self.contentView.addSubview(nameLabel)
+            }
+
         }
     }
 }
