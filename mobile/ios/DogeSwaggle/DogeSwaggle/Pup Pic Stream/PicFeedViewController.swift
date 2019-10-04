@@ -9,6 +9,23 @@
 import UIKit
 import SDWebImage
 
+enum PicFilter: Int {
+    case Trending, DogSitters, PlayDates, Recent
+
+    var placeholder: String {
+        switch self {
+        case .Trending:
+            return "Trending"
+        case .DogSitters:
+            return "Dog sitters"
+        case .PlayDates:
+            return "Play dates"
+        case .Recent:
+            return "Recent"
+        }
+    }
+}
+
  class PicFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var filterControl: UISegmentedControl!
@@ -25,6 +42,8 @@ import SDWebImage
                                              right: 15.0)
     
     private var imageUrls = [String?]()
+    
+    private var currentFilter = PicFilter.Trending
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +53,6 @@ import SDWebImage
 
         collectionView.register(UINib(nibName: "PupPicCollectionViewCell", bundle: nil),
                                 forCellWithReuseIdentifier: reuseIdentifier)
-        
         fetchDogImages()
      }
     
@@ -52,7 +70,7 @@ import SDWebImage
                     self.collectionView.reloadData()
                 }
             } catch {
-                
+
             }
         }
         task.resume()
@@ -60,20 +78,11 @@ import SDWebImage
    
     // MARK: - UISegmentedControl
     @IBAction func filterControlDidChange(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            searchBar.placeholder = "Trending"
-        case 1:
-            searchBar.placeholder = "Dog sitters"
-        case 2:
-            searchBar.placeholder = "Play dates"
-        default:
-            searchBar.placeholder = "Recent"        
-        }
+        let filterType = PicFilter(rawValue: sender.selectedSegmentIndex) ?? .Trending
+        searchBar.placeholder = filterType.placeholder
+        currentFilter = filterType
         fetchDogImages()
     }
-    
-    
     
     // MARK: - UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -87,13 +96,28 @@ import SDWebImage
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let isDogSitter = (currentFilter == .DogSitters && indexPath == IndexPath(item: 1, section: 0))
+        let isPlaydate = (currentFilter == .PlayDates && indexPath == IndexPath(item: 7, section: 0))
+        
         let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PupPicCollectionViewCell
+
+        if isDogSitter || isPlaydate {
+            if isDogSitter {
+                cell.pupImageView.image = UIImage(named: "Ellie-Mae-thumb")
+            }
+            else {
+                cell.pupImageView.image = UIImage(named: "Sophie-thumb")
+            }
+        }
+        else {
+            guard let dogImageUrlString = imageUrls[indexPath.row], let dogImageUrl = URL(string: dogImageUrlString)
+                else { return cell }
+            cell.pupImageView.sd_setImage(with: dogImageUrl,
+                                          placeholderImage: nil)
+        }
+
         cell.backgroundColor = waitingGray
-        guard let dogImageUrlString = imageUrls[indexPath.row], let dogImageUrl = URL(string: dogImageUrlString)
-            else { return cell }
-        cell.pupImageView.sd_setImage(with: dogImageUrl,
-                                      placeholderImage: nil)
         cell.pupImageView.contentMode = .scaleAspectFill
 
         return cell

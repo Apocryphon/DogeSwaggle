@@ -15,4 +15,8 @@ class PupPicCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    override func prepareForReuse() {
+        pupImageView.image = nil
+    }
 }
